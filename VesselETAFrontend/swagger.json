@@ -1,0 +1,136 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "VesselETA.ApiGateway",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Ports": {
+      "get": {
+        "tags": [
+          "Ports"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Ports/{portCode}": {
+      "get": {
+        "tags": [
+          "Ports"
+        ],
+        "parameters": [
+          {
+            "name": "portCode",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Ports/{portCode}/vessels": {
+      "get": {
+        "tags": [
+          "Ports"
+        ],
+        "parameters": [
+          {
+            "name": "portCode",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Vessels/{mmsi}/eta": {
+      "get": {
+        "tags": [
+          "Vessels"
+        ],
+        "parameters": [
+          {
+            "name": "mmsi",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Vessels/{mmsi}/history": {
+      "get": {
+        "tags": [
+          "Vessels"
+        ],
+        "parameters": [
+          {
+            "name": "mmsi",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "hours",
+            "in": "query",
+            "style": "form",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 24
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Vessels": {
+      "get": {
+        "tags": [
+          "Vessels"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}

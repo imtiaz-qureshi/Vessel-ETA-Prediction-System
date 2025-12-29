@@ -1,0 +1,22 @@
+.selected-vessel-marker {
+    filter: drop-shadow(0 0 10px #ffcc00) brightness(1.2);
+    z-index: 1000 !important;
+    animation: pulse-marker 2s infinite;
+}
+
+@keyframes pulse-marker {
+    0% {
+        filter: drop-shadow(0 0 10px #ffcc00) brightness(1.2);
+        transform: scale(1);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 20px #ffcc00) brightness(1.5);
+        transform: scale(1.1);
+    }
+
+    100% {
+        filter: drop-shadow(0 0 10px #ffcc00) brightness(1.2);
+        transform: scale(1);
+    }
+}
